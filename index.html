@@ -194,6 +194,87 @@ footer .fin{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--mu
 }
 @media(max-width:520px){.hl{grid-template-columns:1fr 1fr}.route{grid-template-columns:1fr 1fr}.mini{grid-template-columns:1fr}.qnav{grid-template-columns:1fr}.trio{font-size:19px}}
 @media(max-width:600px){.tbl.fun{font-size:13px;table-layout:fixed}.tbl.fun td,.tbl.fun th{hyphens:auto;overflow-wrap:anywhere;padding-right:8px}.tbl.fun td{white-space:normal}}
+
+/* gen — кнопки генерации */
+#gen{background:#fff}
+.gbtns{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
+.gb{position:relative;border:1px solid var(--line);border-radius:20px;padding:24px 24px 26px;background:var(--grey);display:flex;flex-direction:column;gap:12px;text-align:left;font:inherit;color:inherit;cursor:pointer;transition:transform .15s,background .15s}
+.gb:hover{transform:translateY(-2px);background:var(--bls)}
+.gb.main{background:var(--blue);border-color:var(--blue)}
+.gb .n{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--mut)}
+.gb.main .n{color:#1f4f8a}
+.gb h3{font-size:24px}
+.gb p{font-size:14.5px;line-height:1.45;color:var(--ink2)}
+.gb .go{margin-top:auto;display:inline-flex;align-items:center;gap:10px;align-self:flex-start;background:var(--ink);color:#fff;border-radius:999px;padding:12px 20px;font-size:15px;font-weight:500}
+.gb .go:after{content:"✳";color:#8cc4ff}
+.gb[disabled]{opacity:.55;cursor:wait}
+.gdemo{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--mut);margin-top:16px;line-height:1.55}
+.gout{margin-top:34px}
+.gpanel{border:1px solid var(--line);border-radius:22px;padding:28px 28px 30px;margin-top:22px;background:#fff;scroll-margin-top:20px}
+.gpanel .ghd{display:flex;justify-content:space-between;gap:14px;align-items:baseline;flex-wrap:wrap}
+.gpanel .ghd h3{font-size:26px}
+.gtime{font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--bl)}
+.gprog{height:6px;background:var(--grey);border-radius:99px;overflow:hidden;margin:18px 0 16px}
+.gprog span{display:block;height:100%;width:0;background:var(--bl);border-radius:99px;transition:width .35s linear}
+.gsteps{list-style:none;font-family:'JetBrains Mono',monospace;font-size:13px;line-height:1.5}
+.gsteps li{padding:6px 0 6px 28px;position:relative;color:#b5b5b5;transition:color .2s}
+.gsteps li:before{content:"○";position:absolute;left:0;color:#c9c9c9}
+.gsteps li.on{color:var(--ink)}
+.gsteps li.on:before{content:"◌";color:var(--bl);animation:gspin 1s linear infinite;display:inline-block}
+.gsteps li.ok{color:var(--ink2)}
+.gsteps li.ok:before{content:"✓";color:var(--bl);animation:none}
+@keyframes gspin{to{transform:rotate(360deg)}}
+.gres{display:none}
+.gres.on{display:block;animation:gfade .5s ease}
+@keyframes gfade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.gsub{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--mut);margin:26px 0 12px;letter-spacing:.02em}
+.gnote{background:var(--bls);border-radius:14px;padding:14px 16px;font-size:14.5px;line-height:1.5;color:var(--ink2)}
+.igrow{display:flex;gap:14px;overflow-x:auto;padding:16px 16px 12px;border:1px solid var(--line);border-radius:16px;background:#fff}
+.igc{flex:0 0 auto;width:86px;text-align:center;font-size:12.5px;line-height:1.25}
+.igc img{width:78px;height:78px;border-radius:50%;margin:0 auto 7px;padding:3px;border:1.5px solid #dbdbdb;background:#fff}
+.igc.old img{filter:saturate(.9)}
+.ba{display:grid;grid-template-columns:1fr 38px 1fr;gap:10px;align-items:center}
+.ba>div,.pgrid>div,.pgrid>.car{min-width:0}
+.ba .ar{font-family:'JetBrains Mono',monospace;color:var(--coral);text-align:center;font-size:20px}
+.ba .lb{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--mut);margin-bottom:8px}
+.covers{display:flex;gap:12px;overflow-x:auto;padding-bottom:8px;scroll-snap-type:x mandatory}
+.covers button{flex:0 0 auto;width:150px;border:0;padding:0;background:none;cursor:zoom-in;scroll-snap-align:start}
+.covers img{width:150px;height:267px;object-fit:cover;border-radius:12px;border:1px solid var(--line)}
+.covers span{display:block;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--mut);margin-top:6px;text-align:left}
+.gacts{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px;align-items:center}
+.gbtn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--ink);border-radius:999px;padding:11px 18px;font:500 14.5px Inter,sans-serif;color:var(--ink);background:#fff;text-decoration:none;cursor:pointer}
+.gbtn.cta{background:var(--coral);border-color:var(--coral);color:#fff}
+.gbtn.cta:after{content:"→"}
+.gctan{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--mut)}
+.basis{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);margin-top:6px}
+.basis div{padding:14px 12px 14px 0;border-bottom:1px solid var(--line)}
+.basis b{display:block;font-size:24px;font-weight:500;letter-spacing:-.04em;line-height:1.1}
+.basis span{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--mut)}
+.car{position:relative;max-width:460px}
+.car .trk{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;border-radius:14px;border:1px solid var(--line);scrollbar-width:none}
+.car .trk::-webkit-scrollbar{display:none}
+.car .trk img{flex:0 0 100%;width:100%;aspect-ratio:4/5;object-fit:cover;scroll-snap-align:start}
+.car .nv{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:0;background:rgba(255,255,255,.92);box-shadow:0 1px 6px rgba(0,0,0,.18);cursor:pointer;font-size:18px}
+.car .pv{left:10px}.car .nx{right:10px}
+.car .dots{display:flex;gap:6px;justify-content:center;margin-top:10px}
+.car .dots i{width:7px;height:7px;border-radius:50%;background:#d0d0d0}
+.car .dots i.on{background:var(--bl)}
+.pgrid{display:grid;grid-template-columns:460px 1fr;gap:34px;align-items:start}
+.capt{white-space:pre-line;font-size:15px;line-height:1.55;color:var(--ink2);background:var(--grey);border-radius:14px;padding:18px 18px 20px;max-height:520px;overflow:auto}
+.bios{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.bio3{border:1px solid var(--line);border-radius:16px;padding:18px}
+.bio3 .t{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--bl);margin-bottom:10px}
+.bio3 .f{font-weight:600;font-size:14px;margin-bottom:8px}
+.bio3 .l{font-size:14.5px;line-height:1.45}
+.bio3 .l .cut{color:var(--mut)}
+.bio3 .c{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--mut);margin-top:10px}
+.bio3 p{font-size:13.5px;line-height:1.45;color:var(--ink2);margin-top:10px}
+.gjump{margin-top:26px;display:inline-flex;gap:10px;align-items:center;background:var(--ink);color:#fff;border:0;border-radius:999px;padding:13px 22px;font:500 15px Inter,sans-serif;cursor:pointer}
+.gjump:after{content:"✳";color:#8cc4ff}
+@media(max-width:980px){.gbtns{grid-template-columns:1fr}.pgrid{grid-template-columns:1fr}.bios{grid-template-columns:1fr}.basis{grid-template-columns:repeat(3,1fr)}.car{max-width:100%}}
+@media(max-width:520px){.gpanel{padding:20px 16px 22px;border-radius:18px}.ba{grid-template-columns:1fr;gap:6px}.ba .ar{transform:rotate(90deg)}.igc{width:72px}.igc img{width:66px;height:66px}.basis{grid-template-columns:1fr 1fr}.basis b{font-size:21px}.igrow{gap:10px;padding:12px 10px}}
+.gdraft{background:#FFF1C9;border:1px solid #F2C94C;border-radius:12px;padding:12px 16px;font-family:'JetBrains Mono',monospace;font-size:12.5px;line-height:1.5;color:#6b4e00;margin-bottom:6px}
+.gdraft:before{content:"ЧЕРНОВИК · ";font-weight:600}
 </style></head>
 <body>
 
@@ -225,6 +306,21 @@ footer .fin{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--mu
 <a href="#plan"><div class="n">Раздел 06</div><b>План</b><span>сегодня, неделя, месяц</span></a>
 </div>
 </header>
+
+<!-- 1a. ГЕНЕРАЦИЯ -->
+<section id="gen"><div class="wrap">
+<div class="lab">Раздел 00 · сделать под себя</div>
+<h2>Три кнопки: <u>сразу в твоём дизайне</u></h2>
+<p class="lead">Разбор говорит, что поменять. Кнопки делают это сами: берут профиль, снимают дизайн с ленты и собирают готовое — обложки актуальных по новому маршруту, следующий выпуск сильнейшей серии и новую шапку.</p>
+
+<div class="gbtns">
+<button class="gb main" data-k="highlights"><span class="n">01 · актуальные</span><h3>Пять блоков по новому маршруту</h3><p>В её же шаблоне «#перемены к лучшему»: бумажный фон, жёлтый акцент, антиква. «Было → стало» и архив.</p><span class="go">Сделать мне такие хайлайты</span></button>
+<button class="gb main" data-k="post"><span class="n">02 · пост</span><h3>Следующий выпуск сильнейшей серии</h3><p>Берёт лучший личный пост года и раскладывает его же фото в узнаваемый шаблон ленты, с черновиком подписи.</p><span class="go">Создать мне пост</span></button>
+<button class="gb" data-k="bio"><span class="n">03 · шапка</span><h3>Новое био</h3><p>Три варианта под лимит 150 знаков, обе скрытые ссылки — без «ещё».</p><span class="go">Переписать моё био</span></button>
+</div>
+<p class="gdemo">демо-режим: результат собран заранее по профилю @juliashev на данных 30.09.2026, анимация показывает шаги, которые пройдёт живая генерация</p>
+<div class="gout" id="gout"></div>
+</div></section>
 
 <!-- 1. СВЕРКА -->
 <section id="check" class="grey"><div class="wrap">
@@ -292,6 +388,7 @@ footer .fin{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--mu
 <b>Проверено отдельно: инвайт-канал существует и он настоящий</b>
 <p>За разворотом «и ещё 2» — вторая ссылка не бесполезная: канал «Шевырева | Learning by doing» реален, открывается по инвайту (t.me/+615cQ0w2cr8xZmQ6) и описан как место, «где пишу про то, как сама прохожу путь изменений». Именно туда ведут пять из 21 подписи года со словами «подробнее в тг канале». Проблема не в том, что канала нет — а в том, что до него нужно сначала найти кнопку «ещё», потом читать два безымянных пункта, чтобы понять, какой из них канал, а какой запись на сессию.</p>
 </div>
+<button class="gjump" data-k="bio">Переписать моё био</button>
 </div></section>
 
 <!-- 3. АКТУАЛЬНЫЕ -->
@@ -349,6 +446,7 @@ footer .fin{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--mu
 <details><summary><span>05 · «Личное»: то, что реально работает на охват</span></summary><div class="in">
 <p>Лучший пост года по лайкам (132, 09.08.2026) — не про коучинг, а про конец лета в Москве. «Ремонт» тоже личный и живой. Не прятать эту грань, а держать отдельным блоком: она человечная и явно интереснее подписчикам, чем сухие тезисы про перемены.</p></div></details>
 </div>
+<button class="gjump" data-k="highlights">Сделать мне такие хайлайты</button>
 </div></section>
 
 <!-- 4. ЛЕНТА -->
@@ -422,6 +520,7 @@ footer .fin{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--mu
 <div class="pc"><div class="mt">28.12.2025 · рилс · 82 лайка · 838 просмотров</div><h3>Новогодняя шутка про запросы клиентов</h3><span class="tag t-keep">оставить, повторять формат</span>
 <p>«Оказывается всё работает, если знать мат. часть» — короткая, самоироничная, без морали. Второй результат года по лайкам и лучший по вовлечению (34 комментария на 82 лайка — редкое соотношение для аккаунта). Формат «шутка про профессию» стоит повторять чаще одного раза в год.</p></div>
 </div>
+<button class="gjump" data-k="post">Создать мне пост — следующий выпуск «#перемены к лучшему»</button>
 </div></section>
 
 <!-- 5. ВОРОНКА -->
@@ -578,5 +677,164 @@ function closeLb(){lb.classList.remove("on");document.body.style.overflow="";}
 lb.querySelector(".x").addEventListener("click",closeLb);
 lb.addEventListener("click",function(e){if(e.target===lb||e.target===lbImg)closeLb();});
 document.addEventListener("keydown",function(e){if(e.key==="Escape")closeLb();});
+</script>
+
+<script>
+var GEN_PAGE = {profile: "juliashev",
+steps: {
+ highlights: ["Читаю профиль @juliashev", "Смотрю пять текущих актуальных — 38 сторис", "Снимаю дизайн-систему с её же серии «#перемены к лучшему»", "Раскладываю маршрут человека, который пришёл с рилса, на пять блоков", "Рисую обложки 1080×1920", "Режу круглые превью и собираю архив"],
+ post: ["Читаю 280 публикаций аккаунта", "Ищу личный пост с самым большим охватом — 09.08, 132 лайка", "Определяю сильнейшую линию: личные истории", "Беру фото из той же фотосессии, не рисую новых", "Верстаю карточки в шаблоне «#перемены к лучшему»", "Пишу черновик подписи её словами из постов 09.08 и 21.09"],
+ bio: ["Читаю шапку: что видно до «ещё»", "Считаю знаки, лимит 150", "Собираю три варианта"]},
+titles: {highlights: "Пять блоков по новому маршруту", post: "Следующий выпуск сильнейшей серии", bio: "Новое био"}};
+</script>
+
+<script>
+/* ===== Генерация: демо сейчас, живая генерация — заменой одной функции generate() ===== */
+var GEN = {
+  profile: (new URLSearchParams(location.search).get("p") || GEN_PAGE.profile).replace(/[^a-z0-9_-]/gi, ""),
+  steps: GEN_PAGE.steps, titles: GEN_PAGE.titles,
+  endpoint: null,          // сюда встанет URL воркера, например "https://gen.andreyandreev.me/generate"
+  demoMinMs: {highlights: 8200, post: 9400, bio: 6200}
+};
+
+/* ЕДИНСТВЕННАЯ ТОЧКА ЗАМЕНЫ. Сейчас читает заранее собранный результат из gen/<profile>/result.json.
+   Живой режим: POST на воркер, который вернёт объект того же формата (см. README). */
+function generate(kind) {
+  if (GEN.endpoint) {
+    return fetch(GEN.endpoint, {method: "POST", headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({kind: kind, profile: GEN.profile})})
+      .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+      .then(function (d) { d.base = d.base || ""; return d; });
+  }
+  var base = "gen/" + GEN.profile + "/";
+  return fetch(base + "result.json", {cache: "no-cache"})
+    .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+    .then(function (all) { return {kind: kind, base: base, profile: all.profile, data: all[kind]}; });
+}
+
+var STEPS = GEN.steps, TITLES = GEN.titles;
+
+function el(tag, cls, html) { var e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; }
+function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return {"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]; }); }
+function wait(ms) { return new Promise(function (r) { setTimeout(r, ms); }); }
+
+var running = {};
+function run(kind) {
+  if (running[kind]) { running[kind].scrollIntoView({behavior: "smooth", block: "start"}); return; }
+  var out = document.getElementById("gout");
+  var p = el("div", "gpanel"); p.id = "gp-" + kind; running[kind] = p;
+  var hd = el("div", "ghd", "<h3>" + TITLES[kind] + "</h3><span class='gtime'>генерирую…</span>");
+  var bar = el("div", "gprog", "<span></span>");
+  var ul = el("ul", "gsteps");
+  STEPS[kind].forEach(function (s) { ul.appendChild(el("li", "", esc(s))); });
+  var res = el("div", "gres");
+  p.appendChild(hd); p.appendChild(bar); p.appendChild(ul); p.appendChild(res);
+  out.insertBefore(p, out.firstChild);
+  p.scrollIntoView({behavior: "smooth", block: "start"});
+  var btn = document.querySelector('.gb[data-k="' + kind + '"]'); if (btn) btn.disabled = true;
+
+  var t0 = performance.now(), lis = ul.children, n = lis.length;
+  var minMs = GEN.endpoint ? 0 : GEN.demoMinMs[kind];
+  var stepMs = (minMs || 6000) / n, i = 0, done = false;
+  function tick() {
+    if (i > 0) lis[i - 1].className = "ok";
+    if (i < n) { lis[i].className = "on"; bar.firstChild.style.width = Math.round((i + 1) / n * 92) + "%"; i++; }
+    if (!done && i < n) setTimeout(tick, stepMs * (0.75 + Math.random() * 0.5));
+  }
+  tick();
+  Promise.all([generate(kind), wait(minMs)]).then(function (r) {
+    done = true;
+    return wait(Math.max(0, stepMs * 0.6)).then(function () { return r[0]; });
+  }).then(function (g) {
+    for (var k = 0; k < n; k++) lis[k].className = "ok";
+    bar.firstChild.style.width = "100%";
+    var sec = ((performance.now() - t0) / 1000).toFixed(1).replace(".", ",");
+    hd.querySelector(".gtime").textContent = "сгенерировано за " + sec + " с";
+    RENDER[kind](res, g.data, g.base, g.profile);
+    res.appendChild(cta(g.profile));
+    setTimeout(function () { ul.style.display = "none"; bar.style.display = "none"; res.classList.add("on"); }, 350);
+    if (btn) btn.disabled = false;
+  }).catch(function (e) {
+    hd.querySelector(".gtime").textContent = "не получилось: " + e.message;
+    if (btn) btn.disabled = false; delete running[kind];
+  });
+}
+
+function cta(profile) {
+  var c = (profile && profile.cta) || {};
+  var d = el("div", "gacts");
+  d.innerHTML = '<a class="gbtn cta" href="' + esc(c.href || "#") + '" target="_blank" rel="noopener">' + esc(c.label || "Хочу такое для своего профиля") + '</a><span class="gctan">' + esc(c.note || "") + '</span>';
+  return d;
+}
+function openLb(src, ti) { var lb = document.getElementById("lb"); lb.querySelector("img").src = src; lb.querySelector(".ti").textContent = ti; lb.classList.add("on"); document.body.style.overflow = "hidden"; }
+
+var RENDER = {
+  highlights: function (box, d, base) {
+    box.appendChild(el("p", "gnote", esc(d.system)));
+    box.appendChild(el("div", "gsub", "как это будет в профиле"));
+    var row = el("div", "igrow");
+    d.items.forEach(function (it) { row.appendChild(el("div", "igc", '<img src="' + base + it.circle + '" alt="">' + esc(it.title))); });
+    box.appendChild(row);
+    box.appendChild(el("div", "gsub", "было → стало"));
+    var ba = el("div", "ba");
+    var b1 = el("div", "", '<div class="lb">' + esc(d.beforeLabel) + '</div>'), r1 = el("div", "igrow");
+    d.before.forEach(function (it) { r1.appendChild(el("div", "igc old", '<img src="' + base + it.circle + '" alt="">' + esc(it.title))); });
+    b1.appendChild(r1);
+    var b2 = el("div", "", '<div class="lb">' + esc(d.afterLabel) + '</div>'), r2 = el("div", "igrow");
+    d.items.forEach(function (it) { r2.appendChild(el("div", "igc", '<img src="' + base + it.circle + '" alt="">' + esc(it.title))); });
+    b2.appendChild(r2);
+    ba.appendChild(b1); ba.appendChild(el("div", "ar", "→")); ba.appendChild(b2);
+    box.appendChild(ba);
+    box.appendChild(el("div", "gsub", "обложки 1080×1920 · нажми, чтобы открыть"));
+    var cv = el("div", "covers");
+    d.items.forEach(function (it) {
+      var b = el("button", "", '<img src="' + base + it.full + '" alt="" loading="lazy"><span>' + it.n + " · " + esc(it.why) + "</span>");
+      b.addEventListener("click", function () { openLb(base + it.full, it.n + " · " + it.title); });
+      cv.appendChild(b);
+    });
+    box.appendChild(cv);
+    var a = el("div", "gacts", '<a class="gbtn" href="' + base + d.zip + '" download>' + esc(d.zipLabel) + '</a>');
+    box.appendChild(a);
+  },
+  post: function (box, d, base) {
+    var b = d.basis;
+    box.appendChild(el("div", "gsub", "за основу · " + esc(b.date) + " · " + esc(b.title) + ' · <a href="' + esc(b.permalink) + '" target="_blank" rel="noopener" style="color:var(--bl)">открыть пост</a>'));
+    box.appendChild(el("div", "basis", b.stats.map(function (x) { return "<div><b>" + esc(x.v) + "</b><span>" + esc(x.l) + "</span></div>"; }).join("")));
+    box.appendChild(el("p", "gnote", esc(b.why) + " " + esc(d.series)));
+    box.appendChild(el("div", "gsub", esc(d.next)));
+    var g = el("div", "pgrid"), car = el("div", "car"), trk = el("div", "trk"), dots = el("div", "dots");
+    d.slides.forEach(function (s, i) { var im = el("img"); im.src = base + s; im.alt = "кадр " + (i + 1); im.loading = i < 2 ? "eager" : "lazy"; trk.appendChild(im); dots.appendChild(el("i", i ? "" : "on")); });
+    var pv = el("button", "nv pv", "‹"), nx = el("button", "nv nx", "›");
+    pv.setAttribute("aria-label", "назад"); nx.setAttribute("aria-label", "вперёд");
+    function go(dir) { trk.scrollBy({left: dir * trk.clientWidth, behavior: "smooth"}); }
+    pv.addEventListener("click", function () { go(-1); }); nx.addEventListener("click", function () { go(1); });
+    trk.addEventListener("scroll", function () { var k = Math.round(trk.scrollLeft / trk.clientWidth); [].forEach.call(dots.children, function (x, j) { x.className = j === k ? "on" : ""; }); });
+    car.appendChild(trk); car.appendChild(pv); car.appendChild(nx); car.appendChild(dots);
+    var right = el("div", "");
+    if (d.draft) box.insertBefore(el("p", "gdraft", esc(d.draft)), box.firstChild);
+    right.appendChild(el("div", "gsub", (d.draft ? "черновик подписи · " : "подпись к посту · ") + d.caption.length + " знаков"));
+    right.appendChild(el("div", "capt", esc(d.caption)));
+    var acts = el("div", "gacts", '<a class="gbtn" href="' + base + d.zip + '" download>' + esc(d.zipLabel) + '</a>');
+    var cp = el("button", "gbtn", "Скопировать подпись");
+    cp.addEventListener("click", function () { navigator.clipboard && navigator.clipboard.writeText(d.caption).then(function () { cp.textContent = "Скопировано"; }); });
+    acts.appendChild(cp); right.appendChild(acts);
+    g.appendChild(car); g.appendChild(right); box.appendChild(g);
+  },
+  bio: function (box, d) {
+    var w = el("div", "bios");
+    d.variants.forEach(function (v) {
+      var len = v.lines.join("\n").length;
+      var lines = v.lines.map(function (l, i) { return i === 4 ? esc(l.slice(0, 14)) + '… <span class="cut">ещё</span>' : esc(l); }).join("<br>");
+      var c = el("div", "bio3", '<div class="t">' + esc(v.name) + '</div><div class="f">' + esc(v.field) + '</div><div class="l">' + lines + '</div><div class="c">' + len + " / " + d.limit + " знаков · строк " + v.lines.length + (v.lines.length > 4 ? ", пятая под «ещё»" : ", все видны") + "</div><p>" + esc(v.note) + "</p>");
+      var cp = el("button", "gbtn", "Скопировать"); cp.style.marginTop = "12px";
+      cp.addEventListener("click", function () { navigator.clipboard && navigator.clipboard.writeText(v.lines.join("\n")).then(function () { cp.textContent = "Скопировано"; }); });
+      c.appendChild(cp); w.appendChild(c);
+    });
+    box.appendChild(w);
+  }
+};
+
+document.querySelectorAll(".gb").forEach(function (b) { b.addEventListener("click", function () { run(b.dataset.k); }); });
+document.querySelectorAll(".gjump").forEach(function (b) { b.addEventListener("click", function () { run(b.dataset.k); }); });
 </script>
 </body></html>
